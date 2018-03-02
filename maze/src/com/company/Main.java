@@ -1,8 +1,5 @@
 package com.company;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -21,11 +18,11 @@ public class Main {
                 {1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1},
                 {1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1}
          };
-         /*DFS dfs=new DFS();
+         DFS dfs=new DFS(11,10);
          dfs.initial(maze);
          Node start=new Node(0,1);
-         dfs.dfs(start);*/
-         Set<Node> sets=new HashSet<>();
+         dfs.dfs(start);
+         /*Set<Node> sets=new HashSet<>();
          for(int i=0;i<12;i++){
              for(int j=0;j<14;j++){
                  if(maze[i][j]==1){
@@ -35,6 +32,6 @@ public class Main {
          }
          ASTART astart=new ASTART(12,14,sets);
          astart.move(0,1,11,4);
-         astart.showPath();
+         astart.showPath();*/
     }
 }

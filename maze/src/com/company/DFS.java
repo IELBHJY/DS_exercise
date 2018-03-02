@@ -6,12 +6,18 @@ import java.util.LinkedList;
  * Created by apple on 2018/3/1.
  */
 public class DFS {
-    Node end=new Node(1,11);
+    private static int x;
+    private static int y;
+    private Node end;
+    public DFS(int x,int y) {
+        this.x=x;
+        this.y=y;
+        end=new Node(x,y);
+    }
     int[][] map=new int[12][14];
     int[][] move={{0,1},{0,-1},{1,0},{-1,0}};
     boolean[][] mark=new boolean[12][14];
     LinkedList<Integer> path=new LinkedList<>();
-
     public void dfs(Node node){
         //System.out.println(node.x+" "+node.y);
         if(node.x==end.x&&node.y==end.y){
@@ -52,6 +58,6 @@ public class DFS {
 
 
     private  boolean check(Node node){
-        return node.x>=0&&node.x<14&&node.y>=0&&node.y<12;
+        return node.x>=0&&node.x<12&&node.y>=0&&node.y<14;
     }
 }
